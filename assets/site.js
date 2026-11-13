@@ -35,8 +35,8 @@ const translations = {
   ja: {
     lang: "ja",
     title: "BondSet · バレーボール戦術ゲーム",
-    intro: "Airborneは6人制バレーボールの戦術ゲーム。セッターとしてブロックと味方の動きを読み、誰にトスを上げるかを決めよう。オリジナルの学校チームを率いてリーグを戦おう。",
-    screenshot: "Airborneの試合画面。黒潮チームのセッターが攻撃の選択肢を見極めている。",
+    intro: "BondSetは6人制バレーボールの戦術ゲーム。セッターとしてブロックと味方の動きを読み、誰にトスを上げるかを決めよう。オリジナルの学校チームを率いてリーグを戦おう。",
+    screenshot: "BondSetの試合画面。黒潮チームのセッターが攻撃の選択肢を見極めている。",
     upcoming: "App Storeで近日公開",
     download: "App Storeからダウンロード",
     privacy: "プライバシーポリシー",
@@ -49,7 +49,7 @@ const translations = {
   ko: {
     lang: "ko",
     title: "BondSet · 배구 전략 게임",
-    intro: "Airborne은 6인제 배구 전략 게임입니다. 세터가 되어 상대의 블로킹과 팀원의 움직임을 읽고, 누구에게 토스할지 결정하세요. 나만의 학교 팀을 이끌고 리그에 도전하세요.",
+    intro: "BondSet은 6인제 배구 전략 게임입니다. 세터가 되어 상대의 블로킹과 팀원의 움직임을 읽고, 누구에게 토스할지 결정하세요. 나만의 학교 팀을 이끌고 리그에 도전하세요.",
     screenshot: "BondSet 경기 화면. 구로시오 팀의 세터가 공격 경로를 선택하고 있습니다.",
     upcoming: "App Store 출시 예정",
     download: "App Store에서 다운로드",
