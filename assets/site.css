@@ -117,13 +117,18 @@ a:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
   padding-bottom: 7px;
 }
 
-.copy::before {
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(17px, 2.4vw, 31px);
+}
+
+.app-icon {
   display: block;
-  width: 37px;
-  height: 3px;
-  margin-bottom: clamp(17px, 2.4vw, 31px);
-  background: var(--orange);
-  content: "";
+  width: clamp(64px, 6.5vw, 92px);
+  height: auto;
+  border-radius: 22%;
 }
 
 .copy h1 {
@@ -203,8 +208,9 @@ a:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
     padding: 6px;
   }
   .copy { text-align: center; padding-bottom: 0; }
-  .copy::before { width: 25px; height: 2px; margin: 0 auto 12px; }
-  .copy h1 { font-size: clamp(66px, 15vw, 100px); }
+  .brand { flex-direction: row; align-items: center; justify-content: center; gap: 10px; }
+  .app-icon { width: clamp(36px, 9vw, 56px); }
+  .copy h1 { font-size: clamp(51px, 14vw, 94px); }
   .copy p { max-width: 24em; margin: 13px auto 17px; }
   .footer { min-height: 52px; }
 }
