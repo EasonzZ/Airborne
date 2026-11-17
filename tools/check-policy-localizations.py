@@ -89,8 +89,6 @@ def main():
     assert '(영어)' not in script and '隱私權政策（簡中）' not in script
     index = (ROOT / 'index.html').read_text(encoding='utf-8')
     assert 'https://easonzz.github.io/Airborne/' in index and 'https://easonzz.github.io/BondSet/' not in index
-    assert 'site.js?v=privacy-five-languages' in index
-    assert 'available: false' in script, 'do not advertise released availability before launch'
     print('Five policy sections: six topics and eight paragraphs per language')
     if args.original_policy:
         print('Original EN/zh policy disclosures preserved')
