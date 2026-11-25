@@ -20,7 +20,7 @@
 <main>
 <section id="en">
 <h1>BondSet Privacy Policy</h1>
-<p>Updated November 16, 2026. BondSet is published by Yichen Zhu.</p>
+<p>Updated November 25, 2026. BondSet is published by Yichen Zhu.</p>
 
 <h2>Game data and iCloud saves</h2>
 <p>BondSet stores your game-generated player ID, profile name and selected in-game avatar, settings, tutorial progress, teams, tournament progress, and match and progression statistics on your device. When iCloud is available, the game uses Apple’s iCloud key-value storage to sync supported profile, progress, and settings data across your devices. Stamina and the game’s purchase-delivery records are stored on your device. If the iCloud account changes, sync is paused and the existing local save is kept instead of automatically merging it into the new account. Return to the original iCloud account and use the resume action in Settings to continue syncing.</p>
@@ -35,6 +35,11 @@
 <h2>Rewarded advertising</h2>
 <p>When rewarded advertising is available, Google AdMob provides ads and Google’s consent tools present privacy choices where applicable. Google’s advertising SDK may process IP-derived approximate location, device identifiers, ad and app interactions, and diagnostic and performance data for ad delivery, measurement, and related operations. Where tracking is requested, you can decline it or change your choice in iOS Settings. Where available, use Ad Privacy Settings in the game to update your advertising consent choices. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</p>
 
+<h2>In-game announcements and reward claims</h2>
+<p>BondSet uses Firebase Remote Config to fetch in-game announcements and check whether reward offers are available. Firebase uses an app installation identifier to deliver this configuration. Announcements are available independently of your optional analytics choice. When you open an announcement containing remotely hosted images, the game downloads those images over HTTPS; the image hosting provider receives your IP address as part of the request.</p>
+<p>If you claim an announcement or team-offer reward, BondSet stores claim and eligibility records in your private CloudKit database and keeps local receipts and pending-delivery records. Depending on the reward, cloud records include the announcement or campaign identifier, release or test channel, selected entry, reward type, selected team or stamina amount, app installation identifier, an account identifier supplied by CloudKit, the claim time and applicable offer dates, and whether only one reward may be selected. These records verify the original choice, prevent duplicate claims and support eligible recovery. They are not published on the public leaderboard. Hiding or withdrawing an announcement, or deleting public leaderboard records, does not delete these private claim records.</p>
+<p>Verified team unlock rewards can be restored on other devices using the same iCloud account, including after the offer expires or its announcement is withdrawn. Stamina rewards are credited only to the app installation recorded by the original claim; cloud records are not a shared stamina balance. Pending stamina delivery may be retried on that original installation but is not credited again to another device or a new installation. Private claim records can remain after the offer ends or the app is removed. For access or other deletion requests, use the contact email below; public leaderboard deletion does not remove all game or account data.</p>
+
 <h2>Optional usage analytics</h2>
 <p>If you choose to share usage data, BondSet uses Google Analytics for Firebase to understand tutorials, matches, unlocks, stamina, and ad and purchase flows. The app sends game events such as team selections, scores, match duration and statistics, ad results and product identifiers. Google Analytics may also process an app-instance identifier, basic device, operating system and app information, approximate location and automatic usage or purchase events. The game does not attach your public leaderboard ID, nickname, or full receipts to its custom analytics events. We use analytics to improve the game. Analytics is separate from advertising consent, and you can turn it off in Settings at any time. Event data is available in Google Analytics and exported to a private BigQuery dataset in the US. The current BigQuery sandbox expires exported tables after 60 days. You can contact us about analytics data requests using the email below.</p>
 
@@ -44,7 +49,7 @@
 
 <section id="zh" lang="zh-Hans">
 <h1>BondSet 隐私政策</h1>
-<p>更新日期为 2026 年 11 月 16 日。BondSet 由 Yichen Zhu 发布。</p>
+<p>更新日期为 2026 年 11 月 25 日。BondSet 由 Yichen Zhu 发布。</p>
 
 <h2>游戏数据与 iCloud 存档</h2>
 <p>BondSet 会在设备上保存游戏生成的玩家 ID、资料昵称、所选游戏头像、设置、教学进度、球队、赛程、比赛统计和成长进度。iCloud 可用时，游戏通过 Apple 的 iCloud 键值存储在设备间同步支持的资料、进度和设置。体力及游戏内的内购发货记录保存在设备上。iCloud 账号变更时会暂停同步并保留原本机存档，不自动合并到新账号；回到原 iCloud 账号后，可在游戏设置中恢复同步。</p>
@@ -59,6 +64,11 @@
 <h2>激励广告</h2>
 <p>激励广告可用时，广告由 Google AdMob 提供，Google 的同意管理工具会在适用情况下提供隐私选项。Google 广告 SDK 可能处理根据 IP 推断的大致位置、设备标识符、广告与应用交互信息，以及诊断和性能数据，用于广告投放、衡量和相关运营。系统请求追踪权限时，你可以拒绝，也可以在 iOS 设置中修改。游戏显示「广告隐私设置」时，你也可以在那里更新广告同意选项。详情见 <a href="https://policies.google.com/technologies/partner-sites?hl=zh-CN">Google 如何使用采用其服务的应用提供的信息</a>。</p>
 
+<h2>游戏内公告与奖励领取</h2>
+<p>BondSet 使用 Firebase Remote Config 获取游戏内公告和奖励活动的开放状态。Firebase 会使用应用安装标识符传递这项配置。你可以在关闭可选使用情况分析时接收公告。打开包含远程托管图片的公告时，游戏会通过 HTTPS 下载图片，图片托管方会在该请求中收到你的 IP 地址。</p>
+<p>如果你领取公告或选队活动奖励，BondSet 会在你的 CloudKit 私有数据库中保存领取及资格记录，并在本机保存收据和待发放记录。根据奖励类型，云端记录包括公告或活动标识、正式或测试渠道、所选条目、奖励类型、所选队伍或体力数量、应用安装标识、CloudKit 提供的账号标识、领取时间和适用活动起止时间，以及是否只能选择一项奖励。这些记录用于核验原始选择、防止重复领取和恢复符合条件的奖励，不发布到公开周榜。隐藏或撤回公告、删除公开周榜记录，不会删除这些私有领取记录。</p>
+<p>已核验的队伍解锁奖励可在同一 iCloud 账号的其他设备恢复，包括活动到期或公告被撤回后。体力奖励只向原始领取记录对应的应用安装发放，云端记录不是共享体力余额。待发放体力可在原始安装重试，不会在其他设备或新的安装中重复补发。私有领取记录可能在活动结束或卸载游戏后继续保留。如需查询或提出其他删除请求，请使用下方联系邮箱；删除公开周榜不等于清除全部游戏或账号数据。</p>
+
 <h2>可选的使用情况分析</h2>
 <p>如果你选择分享使用数据，BondSet 会使用 Google Analytics for Firebase 了解教学、比赛、解锁、体力以及广告和内购流程。游戏会发送队伍选择、比分、比赛时长和统计、广告结果、商品标识符等事件。Google Analytics 还可能处理应用实例标识符、基本设备信息、操作系统与应用信息、大致位置，以及自动记录的使用或购买事件。游戏的自定义分析事件不附带公开榜单 ID、昵称或完整购买收据。我们使用分析数据改进游戏。使用情况分析与广告同意分别设置，你可以随时在游戏设置中关闭分析。事件可在 Google Analytics 中查看，并导出到美国区域的私有 BigQuery 数据集。当前 BigQuery 沙盒的导出表会在 60 天后到期。你可以通过下方邮箱联系我们处理分析数据请求。</p>
 
@@ -68,7 +78,7 @@
 
 <section id="zh-hant" lang="zh-Hant">
 <h1>BondSet 隱私權政策</h1>
-<p>更新日期為 2026 年 11 月 16 日。BondSet 由 Yichen Zhu 發布。</p>
+<p>更新日期為 2026 年 11 月 25 日。BondSet 由 Yichen Zhu 發布。</p>
 
 <h2>遊戲資料與 iCloud 存檔</h2>
 <p>BondSet 會在裝置上儲存遊戲產生的玩家 ID、個人資料暱稱、所選遊戲頭像、設定、教學進度、球隊、賽程、比賽統計和成長進度。iCloud 可用時，遊戲透過 Apple 的 iCloud 鍵值儲存，在裝置間同步支援的個人資料、進度和設定。體力及遊戲內的內購發貨記錄儲存在裝置上。iCloud 帳號變更時會暫停同步並保留原本機存檔，不自動合併到新帳號；回到原 iCloud 帳號後，可在遊戲設定中恢復同步。</p>
@@ -83,6 +93,11 @@
 <h2>獎勵廣告</h2>
 <p>獎勵廣告可用時，廣告由 Google AdMob 提供，Google 的同意管理工具會在適用情況下提供隱私選項。Google 廣告 SDK 可能處理根據 IP 推斷的大致位置、裝置識別碼、廣告與應用程式互動資訊，以及診斷和效能資料，用於廣告投放、衡量和相關營運。系統請求追蹤權限時，你可以拒絕，也可以在 iOS 設定中修改。遊戲顯示「廣告隱私設定」時，你也可以在那裡更新廣告同意選項。詳情見 <a href="https://policies.google.com/technologies/partner-sites?hl=zh-TW">Google 如何使用採用其服務的應用程式所提供的資訊</a>。</p>
 
+<h2>遊戲內公告與獎勵領取</h2>
+<p>BondSet 使用 Firebase Remote Config 取得遊戲內公告和獎勵活動的開放狀態。Firebase 會使用應用程式安裝識別碼傳遞這項設定。你可以在關閉可選使用情況分析時接收公告。開啟包含遠端託管圖片的公告時，遊戲會透過 HTTPS 下載圖片，圖片託管方會在該請求中收到你的 IP 位址。</p>
+<p>如果你領取公告或選隊活動獎勵，BondSet 會在你的 CloudKit 私有資料庫中儲存領取及資格記錄，並在本機儲存收據和待發放記錄。依獎勵類型，雲端記錄包括公告或活動識別碼、正式或測試渠道、所選項目、獎勵類型、所選球隊或體力數量、應用程式安裝識別碼、CloudKit 提供的帳號識別碼、領取時間和適用活動起迄時間，以及是否只能選擇一項獎勵。這些記錄用於核驗原始選擇、防止重複領取和恢復符合條件的獎勵，不發布到公開週榜。隱藏或撤回公告、刪除公開週榜記錄，不會刪除這些私有領取記錄。</p>
+<p>已核驗的球隊解鎖獎勵可在同一 iCloud 帳號的其他裝置恢復，包括活動到期或公告被撤回後。體力獎勵只向原始領取記錄對應的應用程式安裝發放，雲端記錄不是共享體力餘額。待發放體力可在原始安裝重試，不會在其他裝置或新的安裝中重複補發。私有領取記錄可能在活動結束或解除安裝遊戲後繼續保留。如需查詢或提出其他刪除請求，請使用下方聯絡電子郵件；刪除公開週榜不等於清除全部遊戲或帳號資料。</p>
+
 <h2>可選的使用情況分析</h2>
 <p>如果你選擇分享使用資料，BondSet 會使用 Google Analytics for Firebase 了解教學、比賽、解鎖、體力以及廣告和內購流程。遊戲會傳送球隊選擇、比分、比賽時長和統計、廣告結果、商品識別碼等事件。Google Analytics 還可能處理應用程式執行個體識別碼、基本裝置資訊、作業系統與應用程式資訊、大致位置，以及自動記錄的使用或購買事件。遊戲的自訂分析事件不附帶公開榜單 ID、暱稱或完整購買收據。我們使用分析資料改善遊戲。使用情況分析與廣告同意分別設定，你可以隨時在遊戲設定中關閉分析。事件可在 Google Analytics 中查看，並匯出到美國區域的私有 BigQuery 資料集。目前 BigQuery 沙盒的匯出資料表會在 60 天後到期。你可以透過下方電子郵件聯絡我們處理分析資料請求。</p>
 
@@ -92,7 +107,7 @@
 
 <section id="ja" lang="ja">
 <h1>BondSet プライバシーポリシー</h1>
-<p>更新日：2026年11月16日。BondSet は Yichen Zhu が公開しています。</p>
+<p>更新日：2026年11月25日。BondSet は Yichen Zhu が公開しています。</p>
 
 <h2>ゲームデータと iCloud セーブ</h2>
 <p>BondSet は、ゲームが生成するプレイヤー ID、プロフィール名、選択したゲーム内アイコン、設定、チュートリアルの進行状況、チーム、大会の進行状況、試合統計、成長データを端末に保存します。iCloud が利用可能な場合、Apple の iCloud キー値ストレージを使い、対応するプロフィール、進行状況、設定のデータを端末間で同期します。スタミナとゲーム内購入のアイテム付与記録は端末に保存します。iCloud アカウントが変更された場合、同期を停止して既存の端末内セーブを保持し、新しいアカウントには自動的に統合しません。元の iCloud アカウントに戻り、ゲームの設定で同期を再開できます。</p>
@@ -107,6 +122,11 @@
 <h2>リワード広告</h2>
 <p>リワード広告が利用可能な場合、Google AdMob が広告を提供し、Google の同意管理ツールが必要に応じてプライバシーの選択肢を表示します。Google の広告 SDK は、IP アドレスから推定したおおよその位置情報、端末識別子、広告やアプリの操作情報、診断・パフォーマンスデータを、広告の配信、測定、関連業務のために処理する場合があります。システムがトラッキングの許可を求める際は拒否でき、iOS の設定で選択を変更することもできます。ゲームに「広告のプライバシー設定」が表示される場合は、そこで広告に関する同意の選択を更新できます。詳しくは、<a href="https://policies.google.com/technologies/partner-sites?hl=ja">Google のサービスを使用するアプリから取得した情報の利用方法</a>をご覧ください。</p>
 
+<h2>ゲーム内のお知らせと報酬の受け取り</h2>
+<p>BondSet は Firebase Remote Config を使ってゲーム内のお知らせと報酬キャンペーンの公開状況を取得します。Firebase はアプリのインストール識別子を使ってこの設定を配信します。任意の使用状況分析を無効にしていても、お知らせを受信できます。外部でホストされた画像を含むお知らせを開くと、ゲームは HTTPS で画像をダウンロードし、画像のホスティング事業者はそのリクエストに伴って IP アドレスを受け取ります。</p>
+<p>お知らせやチーム選択キャンペーンの報酬を受け取る場合、BondSet は受け取りと資格の記録をユーザーの CloudKit 非公開データベースに保存し、レシートと未完了の付与記録を端末にも保存します。報酬に応じて、クラウド記録にはお知らせまたはキャンペーンの識別子、正式版またはテスト版のチャンネル、選択項目、報酬の種類、選択したチームまたはスタミナ量、アプリのインストール識別子、CloudKit が提供するアカウント識別子、受け取り時刻と適用されるキャンペーンの開始・終了時刻、報酬を一つだけ選べるかどうかが含まれます。これらは元の選択の検証、重複受け取りの防止、対象となる報酬の復元に使用し、公開ランキングには掲載しません。お知らせを非表示にする、公開を取り下げる、または公開ランキング記録を削除しても、これらの非公開の受け取り記録は削除されません。</p>
+<p>検証済みのチーム解放報酬は、同じ iCloud アカウントを使う別の端末で復元できます。キャンペーンの終了後やお知らせの公開取り下げ後も対象です。スタミナ報酬は、元の受け取り記録に保存されたアプリのインストールにのみ付与します。クラウド記録は共有のスタミナ残高ではありません。未完了のスタミナ付与は元のインストールで再試行できますが、別の端末や新しいインストールに重複して付与しません。非公開の受け取り記録は、キャンペーン終了後やゲームのアンインストール後も残る場合があります。データへのアクセスやその他の削除に関するご要望は、下記のメールアドレスにお送りください。公開ランキングの削除は、すべてのゲームデータやアカウントデータの削除ではありません。</p>
+
 <h2>任意の使用状況分析</h2>
 <p>使用データの共有を選択した場合、BondSet は Google Analytics for Firebase を使ってチュートリアル、試合、解放、スタミナ、広告および購入の流れを把握します。ゲームはチームの選択、スコア、試合時間と統計、広告の結果、商品識別子などのイベントを送信します。Google Analytics は、アプリインスタンス識別子、基本的な端末・OS・アプリ情報、おおよその位置情報、自動記録される使用や購入のイベントも処理する場合があります。ゲーム独自の分析イベントには、公開ランキング ID、ニックネーム、購入レシートの全内容を付加しません。分析データはゲームの改善に使用します。使用状況分析と広告への同意は別々に設定され、分析はゲームの設定でいつでも無効にできます。イベントデータは Google Analytics で閲覧でき、米国リージョンの非公開 BigQuery データセットにエクスポートされます。現在の BigQuery サンドボックスでは、エクスポートしたテーブルは 60 日後に期限切れになります。分析データに関するご要望は、下記のメールアドレスからお問い合わせください。</p>
 
@@ -116,7 +136,7 @@
 
 <section id="ko" lang="ko">
 <h1>BondSet 개인정보 처리방침</h1>
-<p>업데이트 날짜: 2026년 11월 16일. BondSet은 Yichen Zhu가 배포합니다.</p>
+<p>업데이트 날짜: 2026년 11월 25일. BondSet은 Yichen Zhu가 배포합니다.</p>
 
 <h2>게임 데이터와 iCloud 저장 데이터</h2>
 <p>BondSet은 게임에서 생성한 플레이어 ID, 프로필 이름, 선택한 게임 아이콘, 설정, 튜토리얼 진행도, 팀, 대회 진행도, 경기 통계 및 성장 데이터를 기기에 저장합니다. iCloud를 사용할 수 있으면 Apple의 iCloud 키-값 저장소를 사용해 지원되는 프로필, 진행도 및 설정 데이터를 기기 간에 동기화합니다. 스태미나와 게임 내 구매 아이템 지급 기록은 기기에 저장합니다. iCloud 계정이 변경되면 동기화를 중단하고 기존 기기 내 저장 데이터를 유지하며 새 계정에 자동으로 합치지 않습니다. 기존 iCloud 계정으로 돌아온 뒤 게임 설정에서 동기화를 재개할 수 있습니다.</p>
@@ -130,6 +150,11 @@
 
 <h2>보상형 광고</h2>
 <p>보상형 광고를 사용할 수 있으면 Google AdMob이 광고를 제공하며 Google의 동의 관리 도구가 해당되는 경우 개인정보 관련 선택 사항을 표시합니다. Google 광고 SDK는 광고 제공, 측정 및 관련 운영을 위해 IP 주소로 추정한 대략적인 위치, 기기 식별자, 광고 및 앱 상호작용 정보, 진단 및 성능 데이터를 처리할 수 있습니다. 시스템이 추적 권한을 요청할 때 거부할 수 있으며 iOS 설정에서 선택을 변경할 수도 있습니다. 게임에 “광고 개인정보 설정”이 표시되면 해당 메뉴에서 광고 동의 선택을 변경할 수 있습니다. 자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites?hl=ko">Google 서비스를 사용하는 앱의 정보를 Google이 이용하는 방법</a>을 확인해 주세요.</p>
+
+<h2>게임 내 공지와 보상 수령</h2>
+<p>BondSet은 Firebase Remote Config를 사용해 게임 내 공지와 보상 이벤트의 공개 상태를 가져옵니다. Firebase는 앱 설치 식별자로 이 설정을 전달합니다. 선택적 사용 데이터 분석을 꺼도 공지를 받을 수 있습니다. 외부에서 호스팅되는 이미지가 포함된 공지를 열면 게임은 HTTPS로 이미지를 다운로드하며, 이미지 호스팅 업체는 해당 요청을 통해 IP 주소를 받습니다.</p>
+<p>공지 또는 팀 선택 이벤트의 보상을 받으면 BondSet은 수령 및 자격 기록을 사용자의 CloudKit 비공개 데이터베이스에 저장하고, 영수증과 미완료 지급 기록을 기기에도 저장합니다. 보상에 따라 클라우드 기록에는 공지 또는 이벤트 식별자, 정식 또는 테스트 채널, 선택한 항목, 보상 종류, 선택한 팀 또는 스태미나 수량, 앱 설치 식별자, CloudKit이 제공하는 계정 식별자, 수령 시간과 적용되는 이벤트 시작·종료 시간, 하나의 보상만 선택할 수 있는지가 포함됩니다. 이 기록은 원래 선택을 검증하고 중복 수령을 방지하며 복원 대상 보상을 복원하는 데 사용하며 공개 순위에는 게시하지 않습니다. 공지를 숨기거나 철회하거나 공개 순위 기록을 삭제해도 이러한 비공개 수령 기록은 삭제되지 않습니다.</p>
+<p>검증된 팀 해제 보상은 같은 iCloud 계정을 사용하는 다른 기기에서 복원할 수 있으며, 이벤트가 종료되거나 공지가 철회된 후에도 복원할 수 있습니다. 스태미나 보상은 원래 수령 기록에 저장된 앱 설치에만 지급합니다. 클라우드 기록은 공유 스태미나 잔액이 아닙니다. 미완료 스태미나 지급은 원래 설치에서 다시 시도할 수 있지만 다른 기기나 새 설치에 중복 지급하지 않습니다. 비공개 수령 기록은 이벤트가 끝나거나 게임을 삭제한 후에도 남아 있을 수 있습니다. 데이터 열람 또는 다른 삭제 요청은 아래 이메일 주소로 보내 주세요. 공개 순위 삭제는 모든 게임 또는 계정 데이터를 삭제하는 작업이 아닙니다.</p>
 
 <h2>선택적 사용 데이터 분석</h2>
 <p>사용 데이터 공유를 선택하면 BondSet은 Google Analytics for Firebase를 사용해 튜토리얼, 경기, 해제, 스태미나, 광고 및 구매 흐름을 파악합니다. 게임은 팀 선택, 점수, 경기 시간과 통계, 광고 결과 및 상품 식별자 등의 이벤트를 전송합니다. Google Analytics는 앱 인스턴스 식별자, 기본 기기·운영체제·앱 정보, 대략적인 위치 및 자동으로 기록되는 사용 또는 구매 이벤트도 처리할 수 있습니다. 게임의 자체 분석 이벤트에는 공개 순위 ID, 닉네임 또는 전체 구매 영수증을 첨부하지 않습니다. 분석 데이터는 게임 개선에 사용합니다. 사용 데이터 분석과 광고 동의는 별도로 설정되며 게임 설정에서 언제든지 분석을 끌 수 있습니다. 이벤트 데이터는 Google Analytics에서 확인할 수 있으며 미국 리전의 비공개 BigQuery 데이터세트로 내보냅니다. 현재 BigQuery 샌드박스에서는 내보낸 테이블이 60일 후 만료됩니다. 분석 데이터 관련 요청은 아래 이메일 주소로 문의해 주세요.</p>
